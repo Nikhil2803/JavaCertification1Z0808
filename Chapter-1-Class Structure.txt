@@ -1,0 +1,106 @@
+#Structure of Java Class
+
+	package statement
+	import statement
+	comments
+	Class declaration {
+		variables,
+		comments
+		constructors
+		methods,
+		nested classes
+		nested interfaces
+		enums
+		
+	}
+	
+*For Default packages there is no package statement
+
+#Comments Type in Java
+
+	1. End line comments : These are usually added at end of line or line break or above variables. These are added basically to describale any variable or any line of code
+		private String personName;  //Variable to store person name
+		
+	2. Multi line comments : Comments between /* */.  Multi line comments are generally added above Method or class declaration. It basically describes the Method or Class.
+		/* @author: Nikhil
+		 * @version 0.1
+		 * Class to store person details
+		 */
+	3. JavaDoc Comments : These are special comments start with /** and ends with */. These comments are processed by JavaDoc a JDK tool to generation API Documentation for Java 
+		source file
+		
+#Declaration of Class consist of following parts :
+	
+	1. Access Modifiers ( Root level classes could only have public or default access modifiers)
+	2. Non Access Modifiers (abstract, final, static) [Root level class could not be static] [abstract and final could not be used together]
+	3. Keyword "class"
+	4. Class Name
+	5. keyword "extends" followed by Base class name, if the class is derived class.
+	6. keyword "implements" followed by Interface name, if the class is implementing n interfcae
+	7. Class Body (Class fields, Methods, constructors, blocks, static blocks, nested classes, nested interfaces)
+
+
+	public static final class Runner extends Person implements Athlete {
+
+	}
+	
+#Java source code File:
+
+	* Text file whose name ends with .java. All Java code entities such as Class, Interface, Enum and Annotations is written in Java Source code file.
+	
+	* There could be single or multiple Classes and interfaces defined in same Java source code file.
+	
+	* Name of Java source file must match with public entity in source file and for the same reason there could only be single public entity in the source file.
+	
+	* There could only be single package statement and import statement in Java source file. Same package and import statements are applicable for all the entities.
+	
+	* 
+	
+#Command line execution:
+
+	<Java Command>  <Name of class with main method> <argutment 1> argument 2>
+	
+
+#Package Imports : 
+
+	1. To access any class file from other named package that class file must be first imported.
+	
+	2. Type of package imports statements
+	
+		A. Fully qualified package name single imports. import edu.java.cert.basics.Chapter1; 
+		
+		B. All imports from a package. This statemnt will import all the classes form a package.  import edu.java.cert.basics.*;
+			Note: All (*) impot is not recursive. So any sub package classes will not be imported.
+			
+		C. Starting from Java 8. We can directly call the static member of any class with the help of static imports.
+			
+			package edu.java.cert;
+			public class ExamQuestion{
+				static public marks; 			// static and public could be written in any order
+				public static void print(){
+				}
+			}
+			
+			import static edu.java.cert.ExamQuestion.*;
+			//import static edu.java.cert.ExamQuestion.marks;	--single import
+			public class AnualExam{
+				AnualExam(){
+					marks = 20;				//Static member could be called without prefixing them with Class name
+					print();
+				}
+			}
+			
+		D. Default package classes/interfaces is automatically imported in other classes/interfaces of default package
+		
+		E. A class from default package could never be used in class of named packages.
+		
+
+	
+	
+	
+
+	
+		
+
+
+
